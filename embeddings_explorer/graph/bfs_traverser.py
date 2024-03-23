@@ -1,20 +1,28 @@
-from .traverser import Traverser
 import networkx as nx
+from .traverser import Traverser
 
 
 class BfsTraverser(Traverser):
-    def traverse(self, G, start_node, end_node=None):
-        # If end_node is not specified, perform BFS from start_node without a specific goal
-        if end_node is None:
-            # Generate a BFS tree from start_node and return the edges
-            bfs_tree = nx.bfs_tree(G, start_node)
-            return list(bfs_tree.edges())
-        else:
-            # Attempt to find a path to end_node
-            # This implicitly uses BFS for unweighted graphs
-            try:
-                path = nx.shortest_path(G, start_node, end_node)
-                return path
-            except nx.NetworkXNoPath:
-                print(f"No path found from {start_node} to {end_node}.")
-                return []
+    def traverse(self, G, start_node, end_node):
+        """
+        Traverse the graph G using BFS from start_node to end_node.
+
+        Parameters:
+        - G (nx.Graph): The graph to be traversed.
+        - start_node (Any): The starting node for the traversal.
+        - end_node (Any): The end node to reach.
+
+        Returns:
+        - tuple: A tuple containing:
+            - list: The path taken during the traversal, as a list of nodes.
+            - int: The distance of the path, measured as the number of edges.
+        """
+        try:
+            # Find the shortest path using BFS (default for unweighted graphs)
+            path = nx.shortest_path(G, start_node, end_node)
+            # The distance is the number of edges, which is one less than the number of nodes in the path
+            distance = len(path) - 1
+            return path, distance
+        except nx.NetworkXNoPath:
+            print(f"No path found from {start_node} to {end_node}.")
+            return [], 0

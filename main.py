@@ -1,4 +1,5 @@
 import logging
+from embeddings_explorer.graph.bfs_traverser import BfsTraverser
 from embeddings_explorer.orchestrator.explorer import EmbeddingsExplorer
 from embeddings_explorer.corpus.brown_corpus_provider import BrownCorpusProvider
 from embeddings_explorer.models.sentence_bert import SentenceBertGenerator

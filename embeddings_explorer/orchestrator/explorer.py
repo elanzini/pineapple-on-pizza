@@ -61,5 +61,11 @@ class EmbeddingsExplorer:
         G = self.graph_constructor.construct_graph(embeddings)
 
         logging.info("Traversing the graph...")
-        path = self.traverser.traverse(G, start_node, end_node)
-        logging.info(f"Path from {start_node} to {end_node}: {path}")
+        path, total_distance = self.traverser.traverse(
+            G, start_node, end_node)
+        if path:
+            logging.info(f"Path from {start_node} to {end_node}: {path}")
+            logging.info(f"Total distance traveled: {total_distance}")
+        else:
+            logging.warning(
+                f"Failed to find a path from '{start_node}' to '{end_node}'.")
