@@ -5,28 +5,44 @@ import networkx as nx
 
 
 class KnnGraphConstructor(GraphConstructor):
-    def __init__(self, k=5):
+    def __init__(self, k=5, metric='cosine', weighted=True):
+        """
+        Initializes the KnnGraphConstructor.
+
+        Parameters:
+        k (int): The number of nearest neighbors to connect each node to.
+        metric (str): The distance metric to use ('cosine' or 'euclidean').
+        weighted (bool): Whether to use distances as weights on the edges.
+        """
         self.k = k
+        self.metric = metric
+        self.weighted = weighted
 
     def construct_graph(self, embeddings):
-        # Prepare embeddings for KNN
         labels, embeddings_matrix = zip(*embeddings.items())
         embeddings_matrix = np.array(embeddings_matrix)
 
-        # Use KNN to find nearest neighbors
+        # If using 'cosine' metric, normalize embeddings to unit vectors
+        if self.metric == 'cosine':
+            embeddings_matrix = embeddings_matrix / \
+                np.linalg.norm(embeddings_matrix, axis=1, keepdims=True)
+
+        # Use NearestNeighbors to find indices of nearest neighbors
         knn_model = NearestNeighbors(
-            n_neighbors=self.k + 1, algorithm='ball_tree').fit(embeddings_matrix)
+            n_neighbors=self.k + 1, metric=self.metric).fit(embeddings_matrix)
         distances, indices = knn_model.kneighbors(embeddings_matrix)
 
-        # Create a graph
         G = nx.Graph()
 
         for i, label in enumerate(labels):
             G.add_node(label, embedding=embeddings[label])
 
-            # Add edges from this node to its k-nearest neighbors
-            for j in range(1, self.k + 1):  # start from 1 to skip the node itself
-                G.add_edge(label, labels[indices[i][j]],
-                           weight=distances[i][j])
+            for j in range(1, self.k + 1):  # Start from 1 to skip the node itself
+                neighbor_label = labels[indices[i][j]]
+                if self.weighted:
+                    distance = distances[i][j]
+                    G.add_edge(label, neighbor_label, weight=distance)
+                else:
+                    G.add_edge(label, neighbor_label)
 
         return G

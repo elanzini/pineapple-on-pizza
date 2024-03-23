@@ -10,4 +10,4 @@ class SentenceBertGenerator(Generator):
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
 
     def compute_embeddings(self, input_string):
-        return self.model.encode(input_string)
+        return self.model.encode(input_string, show_progress_bar=False)
