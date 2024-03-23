@@ -6,6 +6,9 @@ class SentenceBertGenerator(Generator):
     def __init__(self):
         self.model = None
 
+    def get_name(self):
+        return "sentence_bert"
+
     def initialize_model(self):
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
 

@@ -3,6 +3,16 @@ from abc import ABC, abstractmethod
 
 class Generator(ABC):
     @abstractmethod
+    def get_name(self):
+        """
+        Return a unique name or identifier for the generator.
+
+        Returns:
+        str: The unique name of the generator.
+        """
+        pass
+
+    @abstractmethod
     def initialize_model(self):
         """
         Initialize and load the model.

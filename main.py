@@ -21,10 +21,11 @@ def main():
 
     # Initialize EmbeddingsExplorer
     explorer = EmbeddingsExplorer(
-        corpus_provider, embedding_generator, graph_constructor, traverser)
+        corpus_provider, embedding_generator, graph_constructor, traverser,
+        "/tmp/embeddings_cache/")
 
     # Start exploration
-    explorer.explore(start_node='have', end_node='court')
+    explorer.explore(start_node='pizza', end_node='pineapple')
 
 
 if __name__ == "__main__":

@@ -21,4 +21,4 @@ class BrownCorpusProvider(CorpusProvider):
         # Get unique words as a list
         unique_words = list(freq_dist.keys())
 
-        return unique_words
+        return unique_words[:100]

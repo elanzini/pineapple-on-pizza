@@ -8,6 +8,9 @@ class BertGenerator(Generator):
         self.model = None
         self.tokenizer = None
 
+    def get_name(self):
+        return "bert"
+
     def initialize_model(self):
         self.model = BertModel.from_pretrained('bert-base-uncased')
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
