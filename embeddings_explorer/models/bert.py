@@ -22,4 +22,4 @@ class BertGenerator(Generator):
             outputs = self.model(**inputs)
 
         # Extract the embeddings for the [CLS] token
-        return outputs.last_hidden_state[:, 0, :]
+        return outputs.last_hidden_state[:, 0, :][0]

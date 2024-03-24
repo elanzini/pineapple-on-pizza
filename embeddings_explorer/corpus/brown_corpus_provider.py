@@ -2,13 +2,17 @@ from .corpus_provider import CorpusProvider
 import nltk
 from nltk.corpus import brown
 
+"""
+If you have not downloaded the brown corpus you are going to have to run this first
+import nltk
+
+nltk.download('brown')
+nltk.download('punkt')
+"""
+
 
 class BrownCorpusProvider(CorpusProvider):
     def get_words(self):
-        # Ensure necessary NLTK data is available
-        nltk.download('brown')
-        nltk.download('punkt')
-
         # Retrieve words from the Brown corpus
         raw_words = brown.words()
 

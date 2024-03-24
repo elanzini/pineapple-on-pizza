@@ -26,7 +26,8 @@ class EmbeddingsExplorer:
         self.traverser: Traverser = traverser
         self.cache_dir = cache_dir
         self.cache = EmbeddingCache()
-        self._load_cache()
+        if self.cache_dir is not None:
+            self._load_cache()
 
     def _cache_file_name(self):
         """
@@ -37,8 +38,11 @@ class EmbeddingsExplorer:
 
     def _load_cache(self):
         """
-        Attempts to load the embedding cache from disk.
+        Attempts to load the embedding cache from disk if a cache directory is provided.
         """
+        if self.cache_dir is None:
+            return  # Skip loading if cache_dir is None
+
         cache_path = os.path.join(self.cache_dir, self._cache_file_name())
         if os.path.exists(cache_path):
             logging.info("Loading embeddings cache from disk...")
@@ -48,8 +52,11 @@ class EmbeddingsExplorer:
 
     def _save_cache(self):
         """
-        Saves the embedding cache to disk, naming the file after the generator.
+        Saves the embedding cache to disk if a cache directory is provided.
         """
+        if self.cache_dir is None:
+            return  # Skip saving if cache_dir is None
+
         cache_path = os.path.join(self.cache_dir, self._cache_file_name())
         logging.info("Saving embeddings cache to disk...")
         self.cache.save_cache(cache_path)
@@ -62,7 +69,8 @@ class EmbeddingsExplorer:
         for word in tqdm(words, desc='Generating Embeddings'):
             embeddings[word] = self.cache.get_embedding(
                 self.embedding_generator, word)
-        self._save_cache()  # Save cache after embeddings generation
+        if self.cache_dir is not None:
+            self._save_cache()  # Save cache only if cache_dir is not None
         return embeddings
 
     def explore(self, start_node, end_node):
