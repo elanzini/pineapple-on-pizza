@@ -8,7 +8,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
-class OpenAIEmbeddingGenerator(Generator):
+class OpenAIGenerator(Generator):
     def __init__(self, cache, model_size="small"):
         super().__init__(cache)
         # Map the model_size parameter to actual OpenAI model identifiers

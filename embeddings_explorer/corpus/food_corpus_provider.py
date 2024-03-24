@@ -19,6 +19,9 @@ class FoodCorpusProvider(CorpusProvider):
         self.language = language
         self.food_list = self._load_food_list()
 
+    def get_name(self):
+        return f'food_{self.language.value}'
+
     def _load_food_list(self):
         """
         Loads the food list from a file based on the specified language.

@@ -12,6 +12,9 @@ nltk.download('punkt')
 
 
 class BrownCorpusProvider(CorpusProvider):
+    def get_name(self):
+        return 'nltk_brown'
+
     def get_words(self):
         # Retrieve words from the Brown corpus
         raw_words = brown.words()

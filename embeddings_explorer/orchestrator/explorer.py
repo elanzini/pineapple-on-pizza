@@ -24,42 +24,9 @@ class EmbeddingsExplorer:
         self.embedding_generator: Generator = embedding_generator
         self.graph_constructor: GraphConstructor = graph_constructor
         self.traverser: Traverser = traverser
-        self.cache_dir = cache_dir
-        self.cache = EmbeddingCache()
-        if self.cache_dir is not None:
-            self._load_cache()
-
-    def _cache_file_name(self):
-        """
-        Generates a cache file name based on the generator's name.
-        """
-        model_name = self.embedding_generator.get_name()
-        return f"{model_name}_embeddings_cache.pkl"
-
-    def _load_cache(self):
-        """
-        Attempts to load the embedding cache from disk if a cache directory is provided.
-        """
-        if self.cache_dir is None:
-            return  # Skip loading if cache_dir is None
-
-        cache_path = os.path.join(self.cache_dir, self._cache_file_name())
-        if os.path.exists(cache_path):
-            logging.info("Loading embeddings cache from disk...")
-            self.cache.load_cache(cache_path)
-        else:
-            logging.info("No existing cache found. Starting fresh...")
-
-    def _save_cache(self):
-        """
-        Saves the embedding cache to disk if a cache directory is provided.
-        """
-        if self.cache_dir is None:
-            return  # Skip saving if cache_dir is None
-
-        cache_path = os.path.join(self.cache_dir, self._cache_file_name())
-        logging.info("Saving embeddings cache to disk...")
-        self.cache.save_cache(cache_path)
+        self.cache = EmbeddingCache(
+            cache_dir, self.embedding_generator.get_name(), self.corpus_provider.get_name())
+        self.cache.load_cache()
 
     def generate_embeddings(self, words):
         """
@@ -69,8 +36,7 @@ class EmbeddingsExplorer:
         for word in tqdm(words, desc='Generating Embeddings'):
             embeddings[word] = self.cache.get_embedding(
                 self.embedding_generator, word)
-        if self.cache_dir is not None:
-            self._save_cache()  # Save cache only if cache_dir is not None
+        self.cache.save_cache()
         return embeddings
 
     def explore(self, start_node, end_node):

@@ -1,9 +1,14 @@
+import os
 import pickle
+import logging
 
 
 class EmbeddingCache:
-    def __init__(self):
+    def __init__(self, cache_dir: str, model_name: str, corpus_name: str):
         self.cache = {}
+        self.cache_dir: str = cache_dir
+        self.model_name: str = model_name
+        self.corpus_name: str = corpus_name
 
     def get_embedding(self, model, word):
         """
@@ -17,19 +22,21 @@ class EmbeddingCache:
         Returns:
         The embedding vector for the word.
         """
-        # Model name or identifier to distinguish embeddings from different models
-        model_name = model.__class__.__name__
-
         # Check if the embedding is already in the cache
-        if (model_name, word) in self.cache:
-            return self.cache[(model_name, word)]
+        if word in self.cache:
+            return self.cache[word]
         else:
             # Generate the embedding and cache it
             embedding = model.compute_embeddings(word)
-            self.cache[(model_name, word)] = embedding
+            self.cache[word] = embedding
             return embedding
 
-    def save_cache(self, filepath):
+    def _get_cache_path(self):
+        cache_file_name = f"{self.model_name}_{self.corpus_name}_cache.pkl"
+        cache_path = os.path.join(self.cache_dir, cache_file_name)
+        return cache_path
+
+    def save_cache(self):
         """
         Save the cache to a file for persistent storage.
 
@@ -37,10 +44,14 @@ class EmbeddingCache:
         - filepath: The path to the file where the cache should be saved.
         """
         # Implement saving logic, e.g., using pickle or json
-        with open(filepath, 'wb') as f:
+        if self.cache_dir is None:
+            return
+        cache_path = self._get_cache_path()
+        logging.info(f"Saving embeddings cache to {cache_path}")
+        with open(cache_path, 'wb') as f:
             pickle.dump(self.cache, f)
 
-    def load_cache(self, filepath):
+    def load_cache(self):
         """
         Load the cache from a file.
 
@@ -48,5 +59,13 @@ class EmbeddingCache:
         - filepath: The path to the file from which to load the cache.
         """
         # Implement loading logic, e.g., using pickle or json
-        with open(filepath, 'rb') as f:
-            self.cache = pickle.load(f)
+        if self.cache_dir is None:
+            return
+
+        cache_path = self._get_cache_path()
+        if os.path.exists(cache_path):
+            logging.info(f"Loading embeddings cache from {cache_path}")
+            with open(cache_path, 'rb') as f:
+                self.cache = pickle.load(f)
+        else:
+            logging.info("No existing cache found. Starting fresh...")
