@@ -1,0 +1,37 @@
+language,model_size,k,distance,path
+EN,small,2,0.9202791597765201,Pizza -> Sandwich -> Burger -> Hotdog -> Octopus -> Tomatoes -> Apple -> Wood Apple -> Pineapple
+EN,small,3,0.434766063930234,Pizza -> Pie -> Apple -> Wood Apple -> Pineapple
+EN,small,4,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,small,5,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,small,6,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,small,7,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,small,8,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,small,9,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,small,10,0.3573411341793572,Pizza -> Pie -> Apple -> Pineapple
+EN,large,2,1.8808339086311483,Pizza -> Pasta -> Pesto -> Lardo -> Pimientos -> Jalapeños -> Guacamole -> Avocado -> Agave Nectar -> Nectarine -> Grapefruit -> Pineapple
+EN,large,3,0.6220990094304956,Pizza -> Pie -> Apple -> Wood Apple -> Pineapple
+EN,large,4,0.6220990094304956,Pizza -> Pie -> Apple -> Wood Apple -> Pineapple
+EN,large,5,0.6220990094304956,Pizza -> Pie -> Apple -> Wood Apple -> Pineapple
+EN,large,6,0.6220990094304956,Pizza -> Pie -> Apple -> Wood Apple -> Pineapple
+EN,large,7,0.6184236290611264,Pizza -> Pepperoni -> Banana Peppers -> Banana -> Pineapple
+EN,large,8,0.6184236290611264,Pizza -> Pepperoni -> Banana Peppers -> Banana -> Pineapple
+EN,large,9,0.5143220258426124,Pizza -> Pie -> Apple -> Pineapple
+EN,large,10,0.5143220258426124,Pizza -> Pie -> Apple -> Pineapple
+IT,small,2,1.0012856551093643,Pizza -> Pancetta -> Panettone -> Panino -> Farina -> Susina -> Seitan -> Unani -> Ananas
+IT,small,3,0.6148833972847263,Pizza -> Pancetta -> Feta -> Bieta -> Aneto -> Ananas
+IT,small,4,0.4540779263403867,Pizza -> Pita -> Pitaya -> Banana -> Ananas
+IT,small,5,0.41118813318465874,Pizza -> Pita -> Seitan -> Ananas
+IT,small,6,0.3988215822962703,Pizza -> Pita -> Pitaya -> Ananas
+IT,small,7,0.3988215822962703,Pizza -> Pita -> Pitaya -> Ananas
+IT,small,8,0.29512783517107133,Pizza -> Pita -> Ananas
+IT,small,9,0.29512783517107133,Pizza -> Pita -> Ananas
+IT,small,10,0.29512783517107133,Pizza -> Pita -> Ananas
+IT,large,2,0.9180945007812512,Pizza -> Pita -> Feta -> Paprika -> Papaya -> Banana -> Ananas
+IT,large,3,0.6904246103262502,Pizza -> Pita -> Pitaya -> Papaya -> Banana -> Ananas
+IT,large,4,0.5256902167808191,Pizza -> Pita -> Pitaya -> Ananas
+IT,large,5,0.5256902167808191,Pizza -> Pita -> Pitaya -> Ananas
+IT,large,6,0.5256902167808191,Pizza -> Pita -> Pitaya -> Ananas
+IT,large,7,0.5256902167808191,Pizza -> Pita -> Pitaya -> Ananas
+IT,large,8,0.5256902167808191,Pizza -> Pita -> Pitaya -> Ananas
+IT,large,9,0.4932823273238749,Pizza -> Pane -> Ananas
+IT,large,10,0.4932823273238749,Pizza -> Pane -> Ananas

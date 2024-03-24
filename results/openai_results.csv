@@ -1,0 +1,37 @@
+language,model_size,k,distance,path
+EN,small,2,4.781912412252535,Pizza -> Pie -> Cake -> Pavlova -> Baklava -> Jalebi -> Gulab Jamun -> Rasmalai -> Rambai -> Rambutan -> Mangosteen -> Pineapple
+EN,small,3,2.952264996187068,Pizza -> Pie -> Pear -> Apricot -> Persimmon -> Rambutan -> Mangosteen -> Pineapple
+EN,small,4,2.129092255984728,Pizza -> Pepperoni -> Bell Pepper -> Banana Peppers -> Banana -> Pineapple
+EN,small,5,2.0822976348723503,Pizza -> Pepperoni -> Bell Peppers -> Banana Peppers -> Banana -> Pineapple
+EN,small,6,2.0822976348723503,Pizza -> Pepperoni -> Bell Peppers -> Banana Peppers -> Banana -> Pineapple
+EN,small,7,2.0822976348723503,Pizza -> Pepperoni -> Bell Peppers -> Banana Peppers -> Banana -> Pineapple
+EN,small,8,1.7703055447250546,Pizza -> Pie -> Pear -> Pomegranate -> Pineapple
+EN,small,9,1.7703055447250546,Pizza -> Pie -> Pear -> Pomegranate -> Pineapple
+EN,small,10,1.6722334969466455,Pizza -> Pie -> Pear -> Peach -> Pineapple
+EN,large,2,3.538837299474352,Pizza -> Pasta -> Pesto -> Romesco -> Roasted Red Peppers -> Bell Peppers -> Bell Pepper -> Paprika -> Papaya -> Pineapple
+EN,large,3,2.6749288362708157,Pizza -> Pie -> Pear -> Peach -> Mango -> Papaya -> Pineapple
+EN,large,4,2.093756773496814,Pizza -> Pepperoni -> Turkey Pepperoni -> Banana Peppers -> Banana -> Pineapple
+EN,large,5,1.8120588752055908,Pizza -> Pepperoni -> Banana Peppers -> Banana -> Pineapple
+EN,large,6,1.8120588752055908,Pizza -> Pepperoni -> Banana Peppers -> Banana -> Pineapple
+EN,large,7,1.0838442332264455,Pizza -> Pie -> Pineapple
+EN,large,8,1.0838442332264455,Pizza -> Pie -> Pineapple
+EN,large,9,1.0838442332264455,Pizza -> Pie -> Pineapple
+EN,large,10,1.0838442332264455,Pizza -> Pie -> Pineapple
+IT,small,2,3.549169061043375,Pizza -> Pasta -> Pane di pasta madre -> Panna da cucina -> Saltati in padella -> Peperoni arrostiti -> Peperoni -> Peperoncino -> Peperoncino banana -> Banana -> Ananas
+IT,small,3,2.891083574986778,Pizza -> Pasta -> Pesto -> Cucchiaiate di pesto -> Cestini di peperoni -> Peperoncino -> Peperoncino banana -> Banana -> Ananas
+IT,small,4,2.536590937693433,Pizza -> Pesto -> Cucchiaiate di pesto -> Cestini di peperoni -> Peperoncino -> Peperoncino banana -> Banana -> Ananas
+IT,small,5,2.0063520716870764,Pizza -> Pomodori -> Peperoni -> Peperoncino banana -> Banana -> Ananas
+IT,small,6,1.653842138877283,Pizza -> Peperoni -> Peperoncino banana -> Banana -> Ananas
+IT,small,7,1.577989496488177,Pizza -> Pita -> Pitaya -> Ananas
+IT,small,8,1.3976610928057256,Pizza -> Peperoni -> Peperoncino banana -> Ananas
+IT,small,9,1.3976610928057256,Pizza -> Peperoni -> Peperoncino banana -> Ananas
+IT,small,10,1.3976610928057256,Pizza -> Peperoni -> Peperoncino banana -> Ananas
+IT,large,2,3.023727010033615,Pizza -> Sale -> Salvia -> Menta -> Aneto -> Ananas
+IT,large,3,2.648097905629062,Pizza -> Mozzarella -> Ricotta -> Ricotta di mandorle -> Formaggio di anacardi -> Anacardi -> Ananas
+IT,large,4,2.001083462475654,Pizza -> Pita -> Pitahaya -> Papaya -> Ananas
+IT,large,5,2.001083462475654,Pizza -> Pita -> Pitahaya -> Papaya -> Ananas
+IT,large,6,2.001083462475654,Pizza -> Pita -> Pitahaya -> Papaya -> Ananas
+IT,large,7,2.001083462475654,Pizza -> Pita -> Pitahaya -> Papaya -> Ananas
+IT,large,8,2.001083462475654,Pizza -> Pita -> Pitahaya -> Papaya -> Ananas
+IT,large,9,2.001083462475654,Pizza -> Pita -> Pitahaya -> Papaya -> Ananas
+IT,large,10,1.6322195501902506,Pizza -> Pita -> Pitahaya -> Ananas

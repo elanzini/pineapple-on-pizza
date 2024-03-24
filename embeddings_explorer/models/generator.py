@@ -20,14 +20,15 @@ class Generator(ABC):
         pass
 
     @abstractmethod
-    def compute_embeddings(self, input_string):
+    def compute_embeddings(self, words):
         """
         Compute embeddings for a given input string.
 
         Parameters:
-        input_string (str): The input string for which embeddings are to be computed.
+        words (str): Words to compute the embeddings for
 
         Returns:
-        The computed embeddings.
+        The computed embeddings in a dictionary where each key is the word
+        and the value the embedding computed for the word.
         """
         pass

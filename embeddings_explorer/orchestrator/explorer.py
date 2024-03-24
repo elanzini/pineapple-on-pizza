@@ -1,4 +1,3 @@
-import os
 import logging
 from tqdm import tqdm
 from embeddings_explorer.corpus.corpus_provider import CorpusProvider
@@ -26,17 +25,15 @@ class EmbeddingsExplorer:
         self.traverser: Traverser = traverser
         self.cache = EmbeddingCache(
             cache_dir, self.embedding_generator.get_name(), self.corpus_provider.get_name())
-        self.cache.load_cache()
+        self.cache_available = self.cache.load_cache()
 
     def generate_embeddings(self, words):
-        """
-        Generates embeddings for the provided words, utilizing cache.
-        """
-        embeddings = {}
-        for word in tqdm(words, desc='Generating Embeddings'):
-            embeddings[word] = self.cache.get_embedding(
-                self.embedding_generator, word)
-        self.cache.save_cache()
+        if self.cache_available:
+            return self.cache.get_embeddings()
+
+        embeddings = self.embedding_generator.compute_embeddings(words)
+
+        self.cache.save_cache(embeddings)
         return embeddings
 
     def explore(self, start_node, end_node):
@@ -65,6 +62,7 @@ class EmbeddingsExplorer:
         if path:
             logging.info(f"Path from {start_node} to {end_node}: {path}")
             logging.info(f"Total distance traveled: {total_distance}")
+            return path, total_distance
         else:
             logging.warning(
                 f"Failed to find a path from '{start_node}' to '{end_node}'.")

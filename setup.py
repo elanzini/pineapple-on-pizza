@@ -19,6 +19,8 @@ setup(
         'transformers',
         'sentence-transformers',
         'torch',
+        'openai',
+        'voyageai'
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
