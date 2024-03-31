@@ -1,8 +1,3 @@
 # Embeddings Explorer
 
-How close is pizza to pineapple? Let's find out!
-
-## TODOs:
-
-- Compute embeddings in parallell
-- Add more models
+Code for the article: https://geppetto.substack.com/p/do-llms-put-pineapple-on-pizza
