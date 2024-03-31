@@ -14,7 +14,7 @@ class OpenAIGenerator(Generator):
         self.model = self._model_identifier(model_size)
 
     def get_name(self):
-        return f"openai_text_embedding_3_{self.model}"
+        return f"openai_{self.model}"
 
     def _model_identifier(self, model_size):
         model_identifiers = {

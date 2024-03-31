@@ -1,0 +1,37 @@
+language,model_size,k,distance,path
+EN,small,2,0.10333274020221822,Carbonara -> Granola -> Cassava -> Cashews -> Cashew Cheese -> Cheese -> Cream Cheese -> Heavy Cream
+EN,small,3,0.07992480947001385,Carbonara -> Granola -> Gouda -> Cheese -> Cream Cheese -> Heavy Cream
+EN,small,4,0.07129010832850392,Carbonara -> Granola -> Gouda -> Cheese -> Heavy Cream
+EN,small,5,0.06736167168428125,Carbonara -> Macaron -> French Toast -> Latte -> Heavy Cream
+EN,small,6,0.05611346357998446,Carbonara -> Caramel Macchiato -> Latte -> Heavy Cream
+EN,small,7,0.05611346357998446,Carbonara -> Caramel Macchiato -> Latte -> Heavy Cream
+EN,small,8,0.0541740316799083,Carbonara -> Ciabatta -> Latte -> Heavy Cream
+EN,small,9,0.05214113960796808,Carbonara -> Macaron -> Latte -> Heavy Cream
+EN,small,10,0.05214113960796808,Carbonara -> Macaron -> Latte -> Heavy Cream
+EN,large,2,0.07314925405876302,Carbonara -> Mascarpone -> Marzipan -> Meringue -> Cream -> Heavy Cream
+EN,large,3,0.05933756354844077,Carbonara -> Mascarpone -> Meringue -> Cream -> Heavy Cream
+EN,large,4,0.05933756354844077,Carbonara -> Mascarpone -> Meringue -> Cream -> Heavy Cream
+EN,large,5,0.05933756354844077,Carbonara -> Mascarpone -> Meringue -> Cream -> Heavy Cream
+EN,large,6,0.05933756354844077,Carbonara -> Mascarpone -> Meringue -> Cream -> Heavy Cream
+EN,large,7,0.05412569092651414,Carbonara -> Ricotta -> Ricotta Cheese -> Cottage Cheese -> Heavy Cream
+EN,large,8,0.05412569092651414,Carbonara -> Ricotta -> Ricotta Cheese -> Cottage Cheese -> Heavy Cream
+EN,large,9,0.05412569092651414,Carbonara -> Ricotta -> Ricotta Cheese -> Cottage Cheese -> Heavy Cream
+EN,large,10,0.04790077120137201,Carbonara -> Ricotta -> Yogurt -> Heavy Cream
+IT,small,2,0.06336046351593187,Carbonara -> Carambola -> Ciambella -> Cannella -> Panna
+IT,small,3,0.06336046351593187,Carbonara -> Carambola -> Ciambella -> Cannella -> Panna
+IT,small,4,0.06325170361662474,Carbonara -> Macaron -> Panini -> Pancetta -> Panna
+IT,small,5,0.06325170361662474,Carbonara -> Macaron -> Panini -> Pancetta -> Panna
+IT,small,6,0.04905825824513275,Carbonara -> Macaron -> Panini -> Panna
+IT,small,7,0.04762187300532405,Carbonara -> Granola -> Ananas -> Panna
+IT,small,8,0.04762187300532405,Carbonara -> Granola -> Ananas -> Panna
+IT,small,9,0.04762187300532405,Carbonara -> Granola -> Ananas -> Panna
+IT,small,10,0.04762187300532405,Carbonara -> Granola -> Ananas -> Panna
+IT,large,2,0.08719711995207145,Carbonara -> Carciofo -> Cuori di carciofo -> Crosta di broccoli -> Crosta di zucca -> Castagna d'acqua -> Panna da cucina -> Panna
+IT,large,3,0.07242166795143784,Carbonara -> Carciofo -> Cuori di carciofo -> Crosta di broccoli -> Crosta di zucca -> Panna da cucina -> Panna
+IT,large,4,0.0588042773752948,Carbonara -> Mascarpone -> Marmellata -> Cannella -> Panna
+IT,large,5,0.029014832232129736,Carbonara -> Panna da cucina -> Panna
+IT,large,6,0.029014832232129736,Carbonara -> Panna da cucina -> Panna
+IT,large,7,0.029014832232129736,Carbonara -> Panna da cucina -> Panna
+IT,large,8,0.029014832232129736,Carbonara -> Panna da cucina -> Panna
+IT,large,9,0.029014832232129736,Carbonara -> Panna da cucina -> Panna
+IT,large,10,0.029014832232129736,Carbonara -> Panna da cucina -> Panna

@@ -1,0 +1,40 @@
+language,model_size,k,distance,path
+EN,small,2,0.22099697873344537,Carbonara -> Spaghetti -> Spelt -> Flour -> Bread -> Sourdough -> Brioche -> Brie -> Brie Cheese -> Cream Cheese -> Heavy Cream
+EN,small,3,0.15813387420770939,Carbonara -> Pasta -> Pesto -> Parmesan -> Cheddar -> Cheese -> Cream Cheese -> Heavy Cream
+EN,small,4,0.12029644829259019,Carbonara -> Rigatoni -> Rollinia -> Ricotta Cheese -> Cream Cheese -> Heavy Cream
+EN,small,5,0.09521140634794333,Carbonara -> Spaghetti -> Soup -> Cream -> Heavy Cream
+EN,small,6,0.09521140634794333,Carbonara -> Spaghetti -> Soup -> Cream -> Heavy Cream
+EN,small,7,0.09521140634794333,Carbonara -> Spaghetti -> Soup -> Cream -> Heavy Cream
+EN,small,8,0.09140092875790201,Carbonara -> Rigatoni -> Ricotta Cheese -> Cream Cheese -> Heavy Cream
+EN,small,9,0.09140092875790201,Carbonara -> Rigatoni -> Ricotta Cheese -> Cream Cheese -> Heavy Cream
+EN,small,10,0.09140092875790201,Carbonara -> Rigatoni -> Ricotta Cheese -> Cream Cheese -> Heavy Cream
+EN,large,2,0.10067451163511502,Carbonara -> Pasta -> Pizza -> Pie -> Cake -> Cream -> Heavy Cream
+EN,large,3,0.08403938064892197,Carbonara -> Pasta -> Pizza -> Cake -> Cream -> Heavy Cream
+EN,large,4,0.08403938064892197,Carbonara -> Pasta -> Pizza -> Cake -> Cream -> Heavy Cream
+EN,large,5,0.0814205292336962,Carbonara -> Prosciutto -> Parmigiano-Reggiano -> Parmesan -> Mascarpone -> Heavy Cream
+EN,large,6,0.05599795154871548,Carbonara -> Affogato -> Mascarpone -> Heavy Cream
+EN,large,7,0.05599795154871548,Carbonara -> Affogato -> Mascarpone -> Heavy Cream
+EN,large,8,0.05198875301866425,Carbonara -> Parmesan -> Mascarpone -> Heavy Cream
+EN,large,9,0.05198875301866425,Carbonara -> Parmesan -> Mascarpone -> Heavy Cream
+EN,large,10,0.05198875301866425,Carbonara -> Parmesan -> Mascarpone -> Heavy Cream
+IT,small,2,0.23638812443995902,Carbonara -> Spaghetti -> Linguine -> Vongole -> Polpo -> Polpette -> Peperone -> Peperoni -> Peperoni arrostiti -> Saltati in padella -> Panna da cucina -> Panna
+IT,small,3,0.08682819525185327,Carbonara -> Pasta -> Pane di pasta madre -> Panna da cucina -> Panna
+IT,small,4,0.08682819525185327,Carbonara -> Pasta -> Pane di pasta madre -> Panna da cucina -> Panna
+IT,small,5,0.08682819525185327,Carbonara -> Pasta -> Pane di pasta madre -> Panna da cucina -> Panna
+IT,small,6,0.07380800601152677,Carbonara -> Pasta -> Pane -> Panna
+IT,small,7,0.07380800601152677,Carbonara -> Pasta -> Pane -> Panna
+IT,small,8,0.07380800601152677,Carbonara -> Pasta -> Pane -> Panna
+IT,small,9,0.07380800601152677,Carbonara -> Pasta -> Pane -> Panna
+IT,small,10,0.07380800601152677,Carbonara -> Pasta -> Pane -> Panna
+IT,large,2,0.08832113120582406,Carbonara -> Spaghetti -> Sushi -> Furikake -> Panko -> Panna
+IT,large,3,0.08832113120582406,Carbonara -> Spaghetti -> Sushi -> Furikake -> Panko -> Panna
+IT,large,4,0.0847833257738931,Carbonara -> Pasta -> Pesto -> Pangrattato -> Panko -> Panna
+IT,large,5,0.07307803726529707,Carbonara -> Fettuccine -> Feta -> Pita -> Panna
+IT,large,6,0.06984768977601584,Carbonara -> Pasta -> Pesto -> Panko -> Panna
+IT,large,7,0.06984768977601584,Carbonara -> Pasta -> Pesto -> Panko -> Panna
+IT,large,8,0.05503836628254517,Carbonara -> Pesto -> Panko -> Panna
+IT,large,9,0.05503836628254517,Carbonara -> Pesto -> Panko -> Panna
+IT,large,10,0.05468442004669215,Carbonara -> Pancetta -> Pancake -> Panna
+
+
+Distance (y-axis) for different models between pizza and pineapple in English (EN) and Italian (IT) using different K (x-axis) and cosine similarity to construct the graph
