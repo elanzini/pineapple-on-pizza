@@ -1,0 +1,10 @@
+nltk
+numpy
+scikit-learn
+matplotlib
+transformers
+sentence-transformers
+networkx
+torch
+openai
+voyageai
