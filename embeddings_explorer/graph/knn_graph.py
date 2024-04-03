@@ -30,7 +30,7 @@ class KnnGraphConstructor(GraphConstructor):
                 np.linalg.norm(embeddings_matrix, axis=1, keepdims=True)
 
         knn_model = NearestNeighbors(
-            n_neighbors=self.k + 1, metric=self.metric).fit(embeddings_matrix)
+            n_neighbors=self.k, metric=self.metric).fit(embeddings_matrix)
         distances, indices = knn_model.kneighbors(embeddings_matrix)
 
         if self.metric == 'euclidean' and self.normalize_euclidean:
@@ -43,7 +43,7 @@ class KnnGraphConstructor(GraphConstructor):
         for i, label in enumerate(labels):
             G.add_node(label, embedding=embeddings[label])
 
-            for j in range(1, self.k + 1):  # Skip the node itself
+            for j in range(1, self.k):  # Skip the node itself
                 neighbor_label = labels[indices[i][j]]
                 if self.weighted:
                     distance = distances[i][j]
