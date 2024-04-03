@@ -2,7 +2,9 @@
 
 For the motivation behind this project, check [this article](https://geppetto.substack.com/p/do-llms-put-pineapple-on-pizza).
 
-![Example Pizza to Pineapple](images/example_path.png)
+In short, this is a framework that allows to generate a graph from a corpus of embeddings and to traverse it.
+
+![Example Pizza to Pineapple](images/example_graph.jpg)
 
 ## Setup
 
